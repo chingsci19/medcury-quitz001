@@ -51,6 +51,7 @@ func AppointmentList(c *fiber.Ctx) base.Response {
 	bResponse := base.Response{}
 
 	appointmentReq := AppointmentListReq{}
+	log.Debug().Msgf("Body : %s", c.Body())
 	err := c.BodyParser(&appointmentReq)
 
 	if err != nil {
@@ -117,12 +118,12 @@ func AppointmentList(c *fiber.Ctx) base.Response {
 
 		}
 	}
-	log.Debug().Msgf("%v", scheduleDay)
+	log.Debug().Msgf("scheduleDay : %v", scheduleDay)
 	//
 	// find all doctor schedule by day of week
 	// docSchedule := doctor.DBGetDoctorScheduleInfo("", scheduleDay)
 	// log.Debug().Msgf("%v", docSchedule)
-
+	log.Debug().Msgf("DBGetDoctorInScheduleInfo : %v", doctor)
 	docInSchedule := doctor.DBGetDoctorInScheduleInfo("", scheduleDay)
 	log.Debug().Msgf("%v", docInSchedule)
 

@@ -20,13 +20,9 @@ var (
 	debug      = flag.Bool("debug", false, "sets log level to debug")
 )
 
-func init() {
+func main() {
 	flag.Parse()
 	config.LoadConfig(*configPath)
-	return
-}
-
-func main() {
 	logData := make(map[string]interface{})
 	logData["tag"] = "main"
 	zerolog.SetGlobalLevel(zerolog.InfoLevel)
