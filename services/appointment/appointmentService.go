@@ -123,7 +123,7 @@ func AppointmentList(c *fiber.Ctx) base.Response {
 	// find all doctor schedule by day of week
 	// docSchedule := doctor.DBGetDoctorScheduleInfo("", scheduleDay)
 	// log.Debug().Msgf("%v", docSchedule)
-	log.Debug().Msgf("DBGetDoctorInScheduleInfo : %v", doctor)
+	log.Debug().Msgf("DBGetDoctorInScheduleInfo : ")
 	docInSchedule := doctor.DBGetDoctorInScheduleInfo("", scheduleDay)
 	log.Debug().Msgf("%v", docInSchedule)
 
