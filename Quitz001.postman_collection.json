@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "b3ce259c-6cc0-4729-827e-b7ad01129480",
+		"name": "Quitz001",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListAppointment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"start_date\" : \"2021-10-11\",\r\n    \"end_date\" : \"2021-10-15\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/api/v1/appointment/list",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"appointment",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ListAppointment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"start_date\" : \"2021-10-11\",\r\n    \"end_date\" : \"2021-10-15\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8082/api/v1/appointment/list",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 16:58:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4910"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "cc16544d-b454-4db9-b398-4e9477c671c4"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"APP-200\",\n    \"status_description\": \"Success.\",\n    \"data\": {\n        \"appointment_list_info\": [\n            {\n                \"doctor_info\": {\n                    \"doctor_id\": \"001\",\n                    \"title\": \"หมอ\",\n                    \"first_name\": \"ก.\",\n                    \"last_name\": \"รักษาใจ\"\n                },\n                \"doctor_schedule_info\": [\n                    {\n                        \"schedule_day\": \"1\",\n                        \"schedule_time_start\": \"08:00\",\n                        \"schedule_time_end\": \"12:00\",\n                        \"schedule_time_slot\": 60,\n                        \"active_flag\": \"Y\"\n                    },\n                    {\n                        \"schedule_day\": \"3\",\n                        \"schedule_time_start\": \"08:00\",\n                        \"schedule_time_end\": \"12:00\",\n                        \"schedule_time_slot\": 60,\n                        \"active_flag\": \"Y\"\n                    },\n                    {\n                        \"schedule_day\": \"5\",\n                        \"schedule_time_start\": \"08:00\",\n                        \"schedule_time_end\": \"12:00\",\n                        \"schedule_time_slot\": 60,\n                        \"active_flag\": \"Y\"\n                    }\n                ],\n                \"available_appointment\": [\n                    {\n                        \"slot_day\": \"2021-10-11\",\n                        \"slot_period_start\": \"2021-10-11 08:00\",\n                        \"slot_period_end\": \"2021-10-11 09:00\",\n                        \"slot_period_text\": \"08:00-09:00\",\n                        \"avaliable\": false,\n                        \"slot_code\": \"001-202110110800-0900\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-11\",\n                        \"slot_period_start\": \"2021-10-11 09:00\",\n                        \"slot_period_end\": \"2021-10-11 10:00\",\n                        \"slot_period_text\": \"09:00-10:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110110900-1000\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-11\",\n                        \"slot_period_start\": \"2021-10-11 10:00\",\n                        \"slot_period_end\": \"2021-10-11 11:00\",\n                        \"slot_period_text\": \"10:00-11:00\",\n                        \"avaliable\": false,\n                        \"slot_code\": \"001-202110111000-1100\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-11\",\n                        \"slot_period_start\": \"2021-10-11 11:00\",\n                        \"slot_period_end\": \"2021-10-11 12:00\",\n                        \"slot_period_text\": \"11:00-12:00\",\n                        \"avaliable\": false,\n                        \"slot_code\": \"001-202110111100-1200\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-13\",\n                        \"slot_period_start\": \"2021-10-13 08:00\",\n                        \"slot_period_end\": \"2021-10-13 09:00\",\n                        \"slot_period_text\": \"08:00-09:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110130800-0900\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-13\",\n                        \"slot_period_start\": \"2021-10-13 09:00\",\n                        \"slot_period_end\": \"2021-10-13 10:00\",\n                        \"slot_period_text\": \"09:00-10:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110130900-1000\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-13\",\n                        \"slot_period_start\": \"2021-10-13 10:00\",\n                        \"slot_period_end\": \"2021-10-13 11:00\",\n                        \"slot_period_text\": \"10:00-11:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110131000-1100\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-13\",\n                        \"slot_period_start\": \"2021-10-13 11:00\",\n                        \"slot_period_end\": \"2021-10-13 12:00\",\n                        \"slot_period_text\": \"11:00-12:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110131100-1200\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-15\",\n                        \"slot_period_start\": \"2021-10-15 08:00\",\n                        \"slot_period_end\": \"2021-10-15 09:00\",\n                        \"slot_period_text\": \"08:00-09:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110150800-0900\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-15\",\n                        \"slot_period_start\": \"2021-10-15 09:00\",\n                        \"slot_period_end\": \"2021-10-15 10:00\",\n                        \"slot_period_text\": \"09:00-10:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110150900-1000\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-15\",\n                        \"slot_period_start\": \"2021-10-15 10:00\",\n                        \"slot_period_end\": \"2021-10-15 11:00\",\n                        \"slot_period_text\": \"10:00-11:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110151000-1100\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-15\",\n                        \"slot_period_start\": \"2021-10-15 11:00\",\n                        \"slot_period_end\": \"2021-10-15 12:00\",\n                        \"slot_period_text\": \"11:00-12:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"001-202110151100-1200\"\n                    }\n                ]\n            },\n            {\n                \"doctor_info\": {\n                    \"doctor_id\": \"002\",\n                    \"title\": \"หมอ\",\n                    \"first_name\": \"ข.\",\n                    \"last_name\": \"รักษาไข้\"\n                },\n                \"doctor_schedule_info\": [\n                    {\n                        \"schedule_day\": \"2\",\n                        \"schedule_time_start\": \"13:00\",\n                        \"schedule_time_end\": \"15:00\",\n                        \"schedule_time_slot\": 30,\n                        \"active_flag\": \"Y\"\n                    },\n                    {\n                        \"schedule_day\": \"4\",\n                        \"schedule_time_start\": \"13:00\",\n                        \"schedule_time_end\": \"15:00\",\n                        \"schedule_time_slot\": 30,\n                        \"active_flag\": \"Y\"\n                    },\n                    {\n                        \"schedule_day\": \"6\",\n                        \"schedule_time_start\": \"13:00\",\n                        \"schedule_time_end\": \"15:00\",\n                        \"schedule_time_slot\": 30,\n                        \"active_flag\": \"Y\"\n                    }\n                ],\n                \"available_appointment\": [\n                    {\n                        \"slot_day\": \"2021-10-12\",\n                        \"slot_period_start\": \"2021-10-12 13:00\",\n                        \"slot_period_end\": \"2021-10-12 13:30\",\n                        \"slot_period_text\": \"13:00-13:30\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"002-202110121300-1330\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-12\",\n                        \"slot_period_start\": \"2021-10-12 13:30\",\n                        \"slot_period_end\": \"2021-10-12 14:00\",\n                        \"slot_period_text\": \"13:30-14:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"002-202110121330-1400\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-12\",\n                        \"slot_period_start\": \"2021-10-12 14:00\",\n                        \"slot_period_end\": \"2021-10-12 14:30\",\n                        \"slot_period_text\": \"14:00-14:30\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"002-202110121400-1430\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-12\",\n                        \"slot_period_start\": \"2021-10-12 14:30\",\n                        \"slot_period_end\": \"2021-10-12 15:00\",\n                        \"slot_period_text\": \"14:30-15:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"002-202110121430-1500\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-14\",\n                        \"slot_period_start\": \"2021-10-14 13:00\",\n                        \"slot_period_end\": \"2021-10-14 13:30\",\n                        \"slot_period_text\": \"13:00-13:30\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"002-202110141300-1330\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-14\",\n                        \"slot_period_start\": \"2021-10-14 13:30\",\n                        \"slot_period_end\": \"2021-10-14 14:00\",\n                        \"slot_period_text\": \"13:30-14:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"002-202110141330-1400\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-14\",\n                        \"slot_period_start\": \"2021-10-14 14:00\",\n                        \"slot_period_end\": \"2021-10-14 14:30\",\n                        \"slot_period_text\": \"14:00-14:30\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"002-202110141400-1430\"\n                    },\n                    {\n                        \"slot_day\": \"2021-10-14\",\n                        \"slot_period_start\": \"2021-10-14 14:30\",\n                        \"slot_period_end\": \"2021-10-14 15:00\",\n                        \"slot_period_text\": \"14:30-15:00\",\n                        \"avaliable\": true,\n                        \"slot_code\": \"002-202110141430-1500\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "GetDoctorAppointmentReport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8082/api/v1/appointment/doctor?id=001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"appointment",
+						"doctor"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "001"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetDoctorAppointmentReport",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8082/api/v1/appointment/doctor?id=001",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"appointment",
+								"doctor"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "001"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 16:58:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2423"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "cb16544d-b454-4db9-b398-4e9477c671c4"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"APP-200\",\n    \"status_description\": \"Success.\",\n    \"data\": {\n        \"doctor_info\": {\n            \"doctor_id\": \"001\",\n            \"title\": \"หมอ\",\n            \"first_name\": \"ก.\",\n            \"last_name\": \"รักษาใจ\"\n        },\n        \"doctor_schedule_info\": [\n            {\n                \"schedule_day\": \"1\",\n                \"schedule_time_start\": \"08:00\",\n                \"schedule_time_end\": \"12:00\",\n                \"schedule_time_slot\": 60,\n                \"active_flag\": \"Y\"\n            },\n            {\n                \"schedule_day\": \"3\",\n                \"schedule_time_start\": \"08:00\",\n                \"schedule_time_end\": \"12:00\",\n                \"schedule_time_slot\": 60,\n                \"active_flag\": \"Y\"\n            },\n            {\n                \"schedule_day\": \"5\",\n                \"schedule_time_start\": \"08:00\",\n                \"schedule_time_end\": \"12:00\",\n                \"schedule_time_slot\": 60,\n                \"active_flag\": \"Y\"\n            }\n        ],\n        \"appointment\": [\n            {\n                \"hn\": \"HN0001\",\n                \"patient_name\": \"นาย กร  \",\n                \"appointment_date\": \"2021-10-11T00:00:00+07:00\",\n                \"appointment_time_start\": \"2021-10-11T11:00:00+07:00\",\n                \"appointment_time_end\": \"2021-10-11T12:00:00+07:00\",\n                \"status\": \"I\",\n                \"updated_by\": \"0810000001\",\n                \"updated_date\": \"2021-10-10T22:49:55+07:00\",\n                \"remark\": null,\n                \"slot_code\": \"001-202110111100-1200\",\n                \"patient_mobile_no\": \"0810000001\"\n            },\n            {\n                \"hn\": \"HN0001\",\n                \"patient_name\": \"นาย กร  \",\n                \"appointment_date\": \"2021-10-11T00:00:00+07:00\",\n                \"appointment_time_start\": \"2021-10-11T11:00:00+07:00\",\n                \"appointment_time_end\": \"2021-10-11T12:00:00+07:00\",\n                \"status\": \"A\",\n                \"updated_by\": \"0810000001\",\n                \"updated_date\": \"2021-10-10T22:52:01+07:00\",\n                \"remark\": null,\n                \"slot_code\": \"001-202110111100-1200\",\n                \"patient_mobile_no\": \"0810000001\"\n            },\n            {\n                \"hn\": \"HN0002\",\n                \"patient_name\": \"นาย นก  \",\n                \"appointment_date\": \"2021-10-11T00:00:00+07:00\",\n                \"appointment_time_start\": \"2021-10-11T10:00:00+07:00\",\n                \"appointment_time_end\": \"2021-10-11T11:00:00+07:00\",\n                \"status\": \"A\",\n                \"updated_by\": \"0810000002\",\n                \"updated_date\": \"2021-10-10T22:52:32+07:00\",\n                \"remark\": null,\n                \"slot_code\": \"001-202110111000-1100\",\n                \"patient_mobile_no\": \"0810000002\"\n            },\n            {\n                \"hn\": \"HN0002\",\n                \"patient_name\": \"นาย นก  \",\n                \"appointment_date\": \"2021-10-11T00:00:00+07:00\",\n                \"appointment_time_start\": \"2021-10-11T08:00:00+07:00\",\n                \"appointment_time_end\": \"2021-10-11T09:00:00+07:00\",\n                \"status\": \"A\",\n                \"updated_by\": \"0810000002\",\n                \"updated_date\": \"2021-10-10T23:01:55+07:00\",\n                \"remark\": null,\n                \"slot_code\": \"001-202110110800-0900\",\n                \"patient_mobile_no\": \"0810000002\"\n            },\n            {\n                \"hn\": \"HN0003\",\n                \"patient_name\": \"นาย ตูน  \",\n                \"appointment_date\": \"2021-10-15T00:00:00+07:00\",\n                \"appointment_time_start\": \"2021-10-15T08:00:00+07:00\",\n                \"appointment_time_end\": \"2021-10-15T09:00:00+07:00\",\n                \"status\": \"I\",\n                \"updated_by\": \"0810000003\",\n                \"updated_date\": \"2021-10-10T23:58:06+07:00\",\n                \"remark\": null,\n                \"slot_code\": \"001-202110150800-0900\",\n                \"patient_mobile_no\": \"0810000003\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "MakeAppointment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mobile_no\" : \"0810000003\",\r\n    \"pin\" : \"333333\",\r\n    \"slot_code\": \"001-202110150800-0900\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8082/api/v1/appointment",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"appointment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "MakeAppointment",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobile_no\" : \"0810000003\",\r\n    \"pin\" : \"333333\",\r\n    \"slot_code\": \"001-202110150800-0900\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8082/api/v1/appointment",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"appointment"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 16:57:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "c916544d-b454-4db9-b398-4e9477c671c4"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"APP-200\",\n    \"status_description\": \"Success.\",\n    \"data\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "DeleteAppointment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8082/api/v1/appointment?id=17",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"appointment"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "DeleteAppointment",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8082/api/v1/appointment?id=17",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"appointment"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "17"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 16:58:05 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": ""
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "ca16544d-b454-4db9-b398-4e9477c671c4"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status_code\": \"APP-200\",\n    \"status_description\": \"Success.\",\n    \"data\": null\n}"
+				}
+			]
+		}
+	]
+}
